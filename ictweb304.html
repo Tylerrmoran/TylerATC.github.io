@@ -1,0 +1,224 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Australian Training Company</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/atc_logo.png" alt="ATC Logo"></a>
+        <h1>Welcome to ATC</h1>
+        <p>Providing Quality Education</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="pages/home.html">Home</a></li>
+            <li><a href="pages/about.html">About ATC</a></li>
+            <li><a href="pages/areas_of_study.html">Areas of Study</a></li>
+            <li><a href="pages/program_structure.html">Training Program Structure</a></li>
+            <li><a href="pages/enrollment.html">Enrollment Details</a></li>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li><a href="pages/inquiry_form.html">Inquiry Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- The content of the home page goes here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Australian Training Company</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact Us - Australian Training Company</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img src="../images/atc_logo.png" alt="ATC Logo"></a>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About ATC</a></li>
+            <li><a href="areas_of_study.html">Areas of Study</a></li>
+            <li><a href="program_structure.html">Training Program Structure</a></li>
+            <li><a href="enrollment.html">Enrollment Details</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="inquiry_form.html">Inquiry Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Details</h2>
+            <p>Email: info@atc.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Education Street, Cityville</p>
+        </section>
+
+        <section>
+            <h2>Inquiry Form</h2>
+            <form id="inquiryForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <div id="confirmationPopup" class="popup">
+            <p>Thank you for your inquiry! We will get back to you soon.</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Australian Training Company</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>
+// contact.js
+function submitForm(event) {
+    event.preventDefault();
+    // You can add logic here to handle the form submission (e.g., sending data to a server).
+    showConfirmationPopup();
+}
+
+function showConfirmationPopup() {
+    document.getElementById("confirmationPopup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("confirmationPopup").style.display = "none";
+}
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+/* style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: grey;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Add your specific styles for different sections as needed */
+
+/* Example styling for a section with a background image */
+section {
+    background-image: url('path/to/your/image.jpg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white; /* Adjust text color for visibility on the background image */
+    padding: 40px;
+}
+
+/* Style the form inputs */
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
